@@ -1,0 +1,15 @@
+cat_vars <- c("Gender","Ethnicity","EducationLevel","Smoking","FamilyHistoryAlzheimers","Cardiovas","Diabetes","Diagnosis")
+
+# Example: BMI by Gender
+ggplot(alz_data, aes(x=factor(Gender), y=BMI)) +
+  geom_boxplot(fill="lightgreen") +
+  theme_minimal() +
+  ggtitle("BMI by Gender")
+ggsave("outputs/boxplots/BMI_by_Gender.png")
+
+# Example: Age by Diagnosis
+ggplot(alz_data, aes(x=factor(Diagnosis), y=Age)) +
+  geom_boxplot(fill="salmon") +
+  theme_minimal() +
+  ggtitle("Age by Diagnosis")
+ggsave("outputs/boxplots/Age_by_Diagnosis.png")
