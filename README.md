@@ -20,3 +20,23 @@ This repository contains R scripts to perform basic statistical analysis on Alzh
 1. Clone repository
 ```bash
 git clone https://github.com/sumit-biostat/R-Clinical-Basic-Statistics.git
+
+# R Clinical Basic Statistics
+
+This project performs basic statistical analysis on clinical Alzheimer's disease data.
+
+## Features
+- Descriptive statistics (mean, median, SD)
+- Frequency tables & proportions
+- Inferential statistics (t-tests, chi-square, ANOVA)
+- Visualizations: histograms & boxplots
+
+## Folder Structure
+- `data/` - input dataset
+- `scripts/` - R scripts for analysis
+- `outputs/` - generated plots
+
+## Usage
+1. Clone repository:
+```bash
+git clone https://github.com/sumit-biostat/R-Clinical-Basic-Statistics.git
