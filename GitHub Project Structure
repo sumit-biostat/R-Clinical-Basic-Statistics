@@ -1,0 +1,14 @@
+R-Clinical-Basic-Statistics/
+├─ data/
+│   └─ alzheimers_disease_data.csv       # your uploaded CSV
+├─ scripts/
+│   ├─ 01_data_upload.R                  # load & check data
+│   ├─ 02_descriptive_stats.R            # mean, median, SD, frequency tables
+│   ├─ 03_inferential_stats.R            # t-tests, chi-square, ANOVA
+│   └─ 04_visualizations.R               # histograms & boxplots
+├─ outputs/
+│   ├─ histograms/
+│   └─ boxplots/
+├─ README.md
+├─ .gitignore
+└─ LICENSE
