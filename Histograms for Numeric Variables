@@ -1,0 +1,20 @@
+library(ggplot2)
+library(tidyverse)
+
+alz_data <- read.csv("data/alzheimers_disease_data.csv")
+
+# List of numeric variables
+num_vars <- c("Age","BMI","AlcoholConsumption","PhysicalAc","DietQuality","SleepQuali",
+              "SystolicBP","DiastolicBP","CholesterolTotal","CholesterolLDL",
+              "CholesterolHDL","CholesterolTriglycerides","MMSE","FunctionalAssessment")
+
+# Loop to create histograms
+for(v in num_vars){
+  p <- ggplot(alz_data, aes_string(x=v)) +
+    geom_histogram(binwidth = (max(alz_data[[v]], na.rm = TRUE) - min(alz_data[[v]], na.rm = TRUE))/30, 
+                   fill="skyblue", color="black") +
+    theme_minimal() +
+    ggtitle(paste("Histogram of", v))
+  print(p)
+  ggsave(paste0("outputs/histograms/", v, "_histogram.png"), plot = p, width=6, height=4)
+}
