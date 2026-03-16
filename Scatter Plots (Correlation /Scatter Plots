@@ -1,0 +1,15 @@
+# BMI vs MMSE
+ggplot(alz_data, aes(x=BMI, y=MMSE)) +
+  geom_point(color="darkblue") +
+  geom_smooth(method="lm", se=FALSE, color="red") +
+  theme_minimal() +
+  ggtitle("BMI vs MMSE")
+ggsave("outputs/plots/BMI_vs_MMSE.png")
+
+# Cholesterol Total vs LDL
+ggplot(alz_data, aes(x=CholesterolTotal, y=CholesterolLDL)) +
+  geom_point(color="purple") +
+  geom_smooth(method="lm", se=FALSE, color="orange") +
+  theme_minimal() +
+  ggtitle("Cholesterol Total vs LDL")
+ggsave("outputs/plots/Cholesterol_Total_vs_LDL.png")
